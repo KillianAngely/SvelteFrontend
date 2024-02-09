@@ -1,3 +1,7 @@
+<script lang="ts">
+    import FizzBuzz from "$lib/fizzBuzz.svelte";
+</script>
+
 <svelte:head>
 	<title>About</title>
 	<meta name="description" content="About this app" />
@@ -24,3 +28,7 @@
 		using it with JavaScript disabled!
 	</p>
 </div>
+<FizzBuzz numberList={[2,3,4]}>
+	<p>Ouai c'est greg!</p>
+</FizzBuzz>
+

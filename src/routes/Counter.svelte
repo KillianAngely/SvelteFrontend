@@ -11,6 +11,7 @@
 		// handle negative numbers
 		return ((n % m) + m) % m;
 	}
+	 const fruitList : Array<string> = ['Fraise','Framboise','Myrille']
 </script>
 
 <div class="counter">
@@ -32,9 +33,19 @@
 			<path d="M0,0.5 L1,0.5 M0.5,0 L0.5,1" />
 		</svg>
 	</button>
+
+	<p>Tema le gateaux</p>
+	<ul>
+		{#each fruitList as fruit,index }
+		<li>{index}:{fruit}</li>
+	{/each}
+
+	</ul>
+	
 </div>
 
 <style>
+	
 	.counter {
 		display: flex;
 		border-top: 1px solid rgba(0, 0, 0, 0.1);
