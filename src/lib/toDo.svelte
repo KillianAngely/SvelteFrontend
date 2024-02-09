@@ -5,11 +5,13 @@
 
 
     function addTask(newTask : string){
+        document.getElementById("input_text").style.removeProperty("border-color");
+
         if (newTask === ""){
-            alert("Veuillez entrer une tâche");
+            document.getElementById("input_text").style.borderColor = "red";
             return;
         };
-        
+
         myTask = [...myTask, newTask];
         newTask = "";
     }
@@ -38,7 +40,7 @@
 </div>
 
 <from>
-    <input type="text" bind:value="{newTask}">
+    <input type="text" id="input_text" bind:value="{newTask}">
     <button type="button" on:click={(e) => addTask(newTask)}>Ajouter</button>
 </from>
 
